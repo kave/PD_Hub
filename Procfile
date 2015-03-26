@@ -1,1 +1,1 @@
-web: gunicorn PD_Hub.wsgi
+web: gunicorn PD_Hub.wsgi --log-file -

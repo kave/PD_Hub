@@ -3,9 +3,9 @@ from django.contrib import admin
 
 admin.autodiscover()
 #site header name
-admin.site.site_header = "Excella Face It Administration"
+admin.site.site_header = "PD Hub Administration"
 #site title name
-admin.site.site_title = "Excella Face It"
+admin.site.site_title = "PD Hub"
 
 
 urlpatterns = patterns('',
