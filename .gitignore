@@ -1,0 +1,9 @@
+/.vagrant
+/static
+*.pyc
+/face_it/settings/local.py
+*.idea
+bower_components
+.DS_Store
+MYENV
+node_modules/PD_Hub/settings/local.py
