@@ -7,6 +7,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+DATABASES = {'default': dj_database_url.config(default=os.environ.get('HEROKU_POSTGRESQL_GRAY_URL'))}
+
 #Env Variables
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "PD_Hub.settings.production")
 os.environ.setdefault("NPM_CONFIG_PRODUCTION", "true")
