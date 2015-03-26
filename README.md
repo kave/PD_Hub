@@ -1,8 +1,7 @@
-Base Project 
+PD Hub Project 
 
 =======================
 
-An Empty Shell Project
 
 Setup
 -----
