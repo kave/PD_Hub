@@ -19,9 +19,9 @@ Setup
 
 Heroku Deployment Commands
 -----
-* heroku create {nameOfHerokuApp}
-* heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
-* git push heroku master
-* heroku addons:add heroku-postgresql
-* heroku ps:scale web=1
-* heroku run python manage.py syncdb
+* 'heroku create {nameOfHerokuApp}'
+* 'heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git'
+* 'git push heroku master'
+* 'heroku addons:add heroku-postgresql'
+* 'heroku ps:scale web=1'
+* 'heroku run python manage.py syncdb'
