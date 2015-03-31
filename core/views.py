@@ -62,7 +62,6 @@ class PDPlanCreateView(CreateView):
         return self.render_to_response(
             self.get_context_data(form=form,
                                   actionitem_form=actionitem_form))
->>>>>>> 82380bbabb3ccd59fc2f0a7d115e25cdc52c3501
 
 
 def user_login(request):
