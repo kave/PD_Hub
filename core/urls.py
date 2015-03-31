@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     url(r'^create_pdplan/$', PDPlanCreateView.as_view()),
     url(r'^list/$', PDPlanList.as_view(), name='pdp_list'),
     url(r'^view/(?P<pk>\d+)/$', PDPPlanDetailView.as_view(), name='pdp_view'),
+    url(r'^clone/(?P<plan_id>\d+)/$', PDPlanClone.as_view(), name='clone'),
 )

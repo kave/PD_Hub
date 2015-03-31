@@ -1,16 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="row text-center">
-        <h2>PD Plan {{ plan.name }}</h2>
-        <div class="panel panel-default">
+    <div class="page-header pull-right">
+        <a href="{% url 'core:clone' 1 %}" class="btn btn-primary">Clone</a>
+    </div>
+    <div class="row" style="margin-top:5%">
+        <h2 class="text-center">PD Plan {{ plan.name }}</h2>
+        <div class="panel panel-default" style="width: 50%; margin-top:3%">
           <div class="panel-heading">Super-visor</div>
           <div class="panel-body">
             {{ plan.supervisor }}
           </div>
         </div>
 
-        <div class="panel panel-default">
+        <div class="panel panel-primary" style="width: 50%; margin-top:3%">
           <div class="panel-heading">Peers</div>
           <div class="panel-body">
             {% for peer in plan.peers.all %}

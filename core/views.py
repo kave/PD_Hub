@@ -4,9 +4,9 @@ from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from forms import UserForm, PDPlanForm, ActionItemFormSet
-from models import PDPlan
+from models import PDPlan, ActionItem
 
 
 class PDPlanCreateView(CreateView):
@@ -136,6 +136,7 @@ class PDPlanList(ListView):
         plans = PDPlan.objects.filter(user = request.user)
         return render(request, 'index.html', {'plans': plans})
 
+
 class PDPPlanDetailView(DetailView):
     model = PDPlan
     template_name = 'plan_view.html'
@@ -145,3 +146,64 @@ class PDPPlanDetailView(DetailView):
         context = super(PDPPlanDetailView, self).get_context_data(**kwargs)
         return context
 
+from django.forms.formsets import formset_factory
+
+class PDPlanClone(UpdateView):
+    #PDPlan.objects.create(user=request.user, name=toClone.name).save()
+    print UpdateView.__dict__
+    template_name = 'pdplan_add.html'
+    model = PDPlan
+    form_class = PDPlanForm
+    success_url = '/list/'
+
+    def get(self, request, *args, **kwargs):
+        """
+        Handles GET requests and instantiates blank versions of the form
+        and its inline formsets.
+        """
+        pdpToClone = PDPlan.objects.get(id=self.kwargs['plan_id'])
+        actionsToClone = ActionItem.objects.filter(plan=pdpToClone)
+        self.object = None
+        form = PDPlanForm(instance=pdpToClone)
+
+        actionitem_form = ActionItemFormSet()
+
+        return self.render_to_response(
+            self.get_context_data(form=form,
+                                  actionitem_form=actionitem_form,
+                                  clone_action=actionsToClone ))
+
+    def post(self, request, *args, **kwargs):
+        """
+        Handles POST requests, instantiating a form instance and its inline
+        formsets with the passed POST variables and then checking them for
+        validity.
+        """
+        self.object = None
+        form_class = self.get_form_class()
+        form = self.get_form(form_class)
+        actionitem_form = ActionItemFormSet(self.request.POST)
+        if form.is_valid() and actionitem_form.is_valid():
+            return self.form_valid(form, actionitem_form)
+        else:
+            return self.form_invalid(form, actionitem_form)
+
+    def form_valid(self, form, actionitem_form):
+        """
+        Called if all forms are valid. Creates a Recipe instance along with
+        associated Ingredients and Instructions and then redirects to a
+        success page.
+        """
+        self.object = form.save()
+        actionitem_form.instance = self.object
+        actionitem_form.save()
+        return HttpResponseRedirect(self.get_success_url())
+
+    def form_invalid(self, form, actionitem_form):
+        """
+        Called if a form is invalid. Re-renders the context data with the
+        data-filled forms and errors.
+        """
+        return self.render_to_response(
+            self.get_context_data(form=form,
+                                  actionitem_form=actionitem_form))
