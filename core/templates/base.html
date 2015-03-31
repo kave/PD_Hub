@@ -32,39 +32,31 @@
     <script type="text/javascript" src="{% static 'bower_components/underscore/underscore-min.js' %} "></script>
 </head>
 
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
 
-        <div class="collapse navbar-collapse" id="navbar-main">
-            <ul class="nav navbar-nav navbar-right">
-                {% if request.user.is_authenticated %}
-                <li class="pull-left">
-                    <a href="{% url 'core:profile' %}?next={{ request.path }}" class="btn btn-primary">
-                    {{ request.user.username }}</a>
-                </li>
-                <li class="pull-left">
-                    <a href="{% url 'core:pdp_list' %}?next={{ request.path }}" class="btn btn-primary">User PDP</a>
-                </li>
-                <li class="pull-left">
-                    <a href="{% url 'core:pdp_create' %}?next={{ request.path }}" class="btn btn-primary">New PDP</a>
-                </li>
-                {% endif %}
-                <li class="center">
-                    <h2><a href="{% url 'core:base' %}?next={{ request.path }}" style="color:white">PDP Hub</a></h2>
-                </li>
-                {% if request.user.is_authenticated %}
-                <li class="pull-right"><a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a></li>
-                {% endif %}
-            </ul>
-        </div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <a class="navbar-brand" href="{% url 'core:base' %}?next={{ request.path }}" style="color:white">PDP Hub</a>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'core:profile' %}?next={{ request.path }}" class="btn btn-primary">
+                    {{ request.user.username }}</a></li>
+            <li><a href="{% url 'core:pdp_list' %}?next={{ request.path }}" class="btn btn-primary">User PDP</a></li>
+            <li><a href="{% url 'core:pdp_create' %}?next={{ request.path }}" class="btn btn-primary">New PDP</a></li>
+            {% endif %}
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a></li>
+            <li><a></a></li>
+            {%  endif %}
+        </ul>
     </div>
 </nav>
 
