@@ -3,7 +3,9 @@ from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
+from django.views.generic import ListView
 from forms import UserForm
+from models import PDPlan
 
 
 def user_login(request):
@@ -66,3 +68,10 @@ def logout_view(request):
     logout(request)
 
     return HttpResponseRedirect('registration/login.html')
+
+class PDPlanList(ListView):
+    model = PDPlan
+
+    def get(self, request):
+        plans = PDPlan.objects.all()
+        return render(request, 'plan_list.html', {'plans': plans})
