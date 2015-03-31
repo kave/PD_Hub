@@ -8,5 +8,5 @@ urlpatterns = patterns('',
     url(r'^profile/$', 'core.views.profile', name='profile'),
     url(r'^create_pdplan/$', PDPlanCreateView.as_view()),
     url(r'^list/$', PDPlanList.as_view(), name='pdp_list'),
-    url(r'^view/(?P<pk>\d+)/$', PDPPlanDetailView.as_view(), name='pdp_view'),
+    url(r'^view/(?P<pk>\d+)/$', PDPlanDetailView.as_view(), name='pdp_view'),
 )
