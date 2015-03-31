@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
     <div class="row text-center">
+
         <h2>PD Plan {{ plan.name }}</h2>
+
+         <div class="panel panel-default">
+          <div class="panel-heading">Owner</div>
+          <div class="panel-body">
+            {{ plan.user }}
+          </div>
+
+        </div>
         <div class="panel panel-default">
           <div class="panel-heading">Super-visor</div>
           <div class="panel-body">
@@ -18,6 +28,22 @@
             {% endfor %}
           </div>
         </div>
+
+         <div class="panel panel-default">
+          <div class="panel-heading">Action Items</div>
+          <div class="panel-body">
+            {% for actionitems in plan.actionitem_set.all %}
+                {{ actionitems }}:
+                {% if not actionitems.complete %}
+                    <input type="checkbox" disabled /><br/>
+                 {%  elif actionitems.complete %}
+                    <input type="checkbox" checked="no"  disabled  /><br/>
+                 {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+
 
     </div>
 {% endblock %}
