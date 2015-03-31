@@ -3,8 +3,8 @@ from django.template.context import RequestContext
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
-from django.views.generic import ListView
-from forms import UserForm
+from django.views.generic import ListView, DetailView
+from forms import UserForm, PDPForm
 from models import PDPlan
 
 
@@ -61,17 +61,33 @@ def base(request):
 
 
 def profile(request):
-    context = RequestContext(request)
+    form = PDPForm()
+    context = RequestContext(request, {'pdp_form': form})
     return render_to_response('profile.html', context_instance=context)
+
 
 def logout_view(request):
     logout(request)
 
     return HttpResponseRedirect('registration/login.html')
 
+
 class PDPlanList(ListView):
     model = PDPlan
 
     def get(self, request):
         plans = PDPlan.objects.all()
+
         return render(request, 'index.html', {'plans': plans})
+
+
+
+class PDPPlanDetailView(DetailView):
+    model = PDPlan
+    template_name = 'plan_view.html'
+    context_object_name = 'plan'
+
+    def get_context_data(self, **kwargs):
+        context = super(PDPPlanDetailView, self).get_context_data(**kwargs)
+        return context
+
