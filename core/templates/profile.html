@@ -7,7 +7,7 @@
     <div class="row text-center">
         <form id="pdp_form" method="post" action="/profile/" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ pdp_form.as_p }}
+            {{ user.as_p }}
 
             <!-- Provide a button to click to submit the form. -->
             <input type="submit" name="submit" class="btn btn-primary" value="create"/>

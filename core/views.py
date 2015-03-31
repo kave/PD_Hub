@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.views.generic import ListView, DetailView
-from forms import UserForm, PDPForm
+from forms import UserForm
 from models import PDPlan
 
 
@@ -63,8 +63,8 @@ def base(request):
 
 
 def profile(request):
-    form = PDPForm()
-    context = RequestContext(request, {'pdp_form': form})
+    form = UserForm()
+    context = RequestContext(request, {'user_form': form})
     return render_to_response('profile.html', context_instance=context)
 
 
