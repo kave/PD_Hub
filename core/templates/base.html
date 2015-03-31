@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/sticky-footer.css' %}">
 
+    {% block head_js %}
+
+    {% endblock %}
+
     {% compress css %}
     {% comment %}
         Per-page CSS is compressed separately so that the global stuff doesn't get re-downloaded each time
