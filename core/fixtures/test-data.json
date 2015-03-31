@@ -1,0 +1,45 @@
+[
+{
+    "fields": {
+        "peers": [
+            4
+        ],
+        "supervisor": 3,
+        "user": 2,
+        "parent": null,
+        "name": "Roaring Plan"
+    },
+    "model": "core.pdplan",
+    "pk": 1
+},
+{
+    "fields": {
+        "description": "I would like to get better at roaring to the left",
+        "plan": 1,
+        "complete": false,
+        "title": "Roar to the left"
+    },
+    "model": "core.actionitem",
+    "pk": 1
+},
+{
+    "fields": {
+        "description": "I would like to get better at roaring to the right",
+        "plan": 1,
+        "complete": false,
+        "title": "Roar to the right"
+    },
+    "model": "core.actionitem",
+    "pk": 2
+},
+{
+    "fields": {
+        "description": "The current roar is a little high pitched.  I would like my roar to have a lower frequency tone.",
+        "plan": 1,
+        "complete": false,
+        "title": "Deeper roar"
+    },
+    "model": "core.actionitem",
+    "pk": 3
+}
+]

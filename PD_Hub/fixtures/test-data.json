@@ -1,0 +1,74 @@
+[
+{
+    "fields": {
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2015-03-31T14:22:33.419Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$ZN7ECLDI6hsJ$v/Su4Q+C+zjjbVVQToUTI7D3hJsCPrryvXt3Hem2x6g=",
+        "email": "admin@admin.com",
+        "date_joined": "2015-03-31T14:22:25.415Z"
+    },
+    "model": "auth.user",
+    "pk": 1
+},
+{
+    "fields": {
+        "username": "chewbacca",
+        "first_name": "Chewbacca",
+        "last_name": "Solo",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-03-31T14:29:04Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$giqeA1UMk4g2$TJZ0HhmQOolNDqxbXUDfVcgsz7NcpBAF+KeTRkv/+U0=",
+        "email": "chewbacca@starwars.com",
+        "date_joined": "2015-03-31T14:29:04Z"
+    },
+    "model": "auth.user",
+    "pk": 2
+},
+{
+    "fields": {
+        "username": "han.solo",
+        "first_name": "Han",
+        "last_name": "Solo",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-03-31T14:29:56Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$mZFLyukrxtBQ$7jXje7vxtDS4n0FUWKio5Qk4Sg+Wpf2JEP0PlC2HX+E=",
+        "email": "han.solo@starwars.com",
+        "date_joined": "2015-03-31T14:29:56Z"
+    },
+    "model": "auth.user",
+    "pk": 3
+},
+{
+    "fields": {
+        "username": "luke.skywalker",
+        "first_name": "Luke",
+        "last_name": "Skywalker",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-03-31T14:34:12Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$Drhtq0qB6gm3$TGcguqoMRJMT4QOtrUszJF4d3J1cudACxLSHd5JGJUE=",
+        "email": "luke.skywalker@starwars.com",
+        "date_joined": "2015-03-31T14:34:12Z"
+    },
+    "model": "auth.user",
+    "pk": 4
+}
+]
