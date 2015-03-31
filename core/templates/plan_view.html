@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% load comments %}
 
 {% block content %}
     <div class="page-header pull-right">
@@ -31,7 +32,6 @@
             {% endfor %}
           </div>
         </div>
-
          <div class="panel panel-default" style="width: 30%; margin-top:3%">
           <div class="panel-heading">Action Items</div>
           <div class="panel-body">
@@ -45,8 +45,7 @@
             {% endfor %}
           </div>
         </div>
-
-
-
     </div>
+    {% render_comment_list for plan %}
+    {% render_comment_form for plan %}
 {% endblock %}
