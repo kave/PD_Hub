@@ -117,7 +117,6 @@ def base(request):
     context = RequestContext(request, {'plans': all_plans})
     return render_to_response('index.html', context_instance=context)
 
-
 def profile(request):
     form = UserForm()
     context = RequestContext(request, {'user_form': form})
@@ -134,10 +133,8 @@ class PDPlanList(ListView):
     model = PDPlan
 
     def get(self, request):
-        plans = PDPlan.objects.all()
-
+        plans = PDPlan.objects.filter(user = request.user)
         return render(request, 'index.html', {'plans': plans})
-
 
 class PDPPlanDetailView(DetailView):
     model = PDPlan
@@ -147,3 +144,4 @@ class PDPPlanDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(PDPPlanDetailView, self).get_context_data(**kwargs)
         return context
+
