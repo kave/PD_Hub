@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="row">
+    <p>Hub-Wide Professional Development Plan List</p>
+    {% for plan in plans %}
+        <a href="{% url 'core:pdp_view' plan.id %}">{{plan.name}}</a>
+    {% endfor %}
+</div>
 {% endblock %}
 

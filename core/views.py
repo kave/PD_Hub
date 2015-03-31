@@ -56,7 +56,9 @@ def register(request):
 
 @login_required
 def base(request):
-    context = RequestContext(request)
+    all_plans = PDPlan.objects.all()
+
+    context = RequestContext(request, {'plans': all_plans})
     return render_to_response('index.html', context_instance=context)
 
 
