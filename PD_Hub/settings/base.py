@@ -147,6 +147,8 @@ INSTALLED_APPS = (
     'djangobower',
     'PD_Hub',
     'import_export',
+    'django.contrib.sites',
+    'django_comments',
 )
 
 EMAIL_SUBJECT_PREFIX = '[PD_Hub] '
