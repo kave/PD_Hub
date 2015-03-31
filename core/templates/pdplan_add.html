@@ -1,18 +1,6 @@
 {% extends "base.html" %}
 {% load add_class %}
 
-{% block head_js %}
-    <script src="{{ STATIC_URL }}bower_components/jquery/dist/jquery.formset.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $(".inline.{{ actionitem_form.prefix }}").formset({
-                prefix: "{{ actionitem_form.prefix }}"
-            })
-        })
-    </script>
-
-{% endblock %}
-
 {% block content %}
 
 <!DOCTYPE html>

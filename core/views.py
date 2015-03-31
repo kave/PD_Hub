@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.views.generic.edit import CreateView
 from forms import UserForm, PDPlanForm, ActionItemFormSet
-from models import PDPlan
+from models import PDPlan, ActionItem
 
 
 class PDPlanCreateView(CreateView):
@@ -140,6 +140,7 @@ class PDPlanDetailView(DetailView):
     model = PDPlan
     template_name = 'plan_view.html'
     context_object_name = 'plan'
+
 
     def get_context_data(self, **kwargs):
         context = super(PDPlanDetailView, self).get_context_data(**kwargs)
