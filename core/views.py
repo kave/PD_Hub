@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.views.generic.edit import CreateView
-from forms import UserForm, PDPlanForm, ActionItemFormSet,
+from forms import UserForm, PDPlanForm, ActionItemFormSet
 from models import PDPlan
 
 
@@ -13,7 +13,7 @@ class PDPlanCreateView(CreateView):
     template_name = 'pdplan_add.html'
     model = PDPlan
     form_class = PDPlanForm
-    success_url = '/profile/'
+    success_url = '/list/'
 
     def get(self, request, *args, **kwargs):
         """
