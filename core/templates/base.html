@@ -45,10 +45,9 @@
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
             {% if request.user.is_authenticated %}
-            <li><a href="{% url 'core:profile' %}?next={{ request.path }}" class="btn btn-primary">
-                    {{ request.user.username }}</a></li>
-            <li><a href="{% url 'core:pdp_list' %}?next={{ request.path }}" class="btn btn-primary">User PDP</a></li>
-            <li><a href="{% url 'core:pdp_create' %}?next={{ request.path }}" class="btn btn-primary">New PDP</a></li>
+            <li><a href="{% url 'core:base' %}" class="btn btn-primary">Home</a></li>
+            <li><a href="{% url 'core:pdp_list' %}?next={{ request.path }}" class="btn btn-primary">My PDP</a></li>
+            <li><a href="{% url 'core:pdp_create' %}?next={{ request.path }}" class="btn btn-primary">Create PDP</a></li>
             {% endif %}
         </ul>
         <ul class="nav navbar-nav navbar-right">
