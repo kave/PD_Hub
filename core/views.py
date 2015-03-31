@@ -112,9 +112,15 @@ def register(request):
 
 @login_required
 def base(request):
-    context = RequestContext(request)
+    all_plans = PDPlan.objects.all()
+
+    context = RequestContext(request, {'plans': all_plans})
     return render_to_response('index.html', context_instance=context)
 
+def profile(request):
+    form = UserForm()
+    context = RequestContext(request, {'user_form': form})
+    return render_to_response('profile.html', context_instance=context)
 
 
 def logout_view(request):
@@ -127,17 +133,16 @@ class PDPlanList(ListView):
     model = PDPlan
 
     def get(self, request):
-        plans = PDPlan.objects.all()
-
+        plans = PDPlan.objects.filter(user = request.user)
         return render(request, 'index.html', {'plans': plans})
 
-
-class PDPPlanDetailView(DetailView):
+class PDPlanDetailView(DetailView):
     model = PDPlan
     template_name = 'plan_view.html'
     context_object_name = 'plan'
 
 
     def get_context_data(self, **kwargs):
-        context = super(PDPPlanDetailView, self).get_context_data(**kwargs)
+        context = super(PDPlanDetailView, self).get_context_data(**kwargs)
         return context
+

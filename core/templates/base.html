@@ -46,11 +46,19 @@
         <div class="collapse navbar-collapse" id="navbar-main">
             <ul class="nav navbar-nav navbar-right">
                 {% if request.user.is_authenticated %}
-                <li class="pull-left"><a href="{% url 'core:profile' %}?next={{ request.path }}">
-                    {{ request.user.username }}</a></li>
+                <li class="pull-left">
+                    <a href="{% url 'core:profile' %}?next={{ request.path }}" class="btn btn-primary">
+                    {{ request.user.username }}</a>
+                </li>
+                <li class="pull-left">
+                    <a href="{% url 'core:pdp_list' %}?next={{ request.path }}" class="btn btn-primary">User PDP</a>
+                </li>
+                <li class="pull-left">
+                    <a href="{% url 'core:pdp_create' %}?next={{ request.path }}" class="btn btn-primary">New PDP</a>
+                </li>
                 {% endif %}
                 <li class="center">
-                    <h2>App</h2>
+                    <h2><a href="{% url 'core:base' %}?next={{ request.path }}" style="color:white">PDP Hub</a></h2>
                 </li>
                 {% if request.user.is_authenticated %}
                 <li class="pull-right"><a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a></li>

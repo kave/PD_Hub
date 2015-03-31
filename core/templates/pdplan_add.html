@@ -1,16 +1,26 @@
 {% extends "base.html" %}
+{% load add_class %}
 
 {% block content %}
 
 <!DOCTYPE html>
 <html>
+
 <body>
-    <div>
+    <div class="container">
         <h1>Professional Development Plan</h1>
         <form action="." method="post">
             {% csrf_token %}
-            <div>
-                {{ form.as_p }}
+            <div class="form-group form-inline">
+                <!--{{ form.as_p }}-->
+                  {% for field in form %}
+                    <div class="form-group">
+                        <label class="form-label">{{ field.label }}</label> 
+                        
+                            {{ field|add_class:"form-control" }}      
+                        
+                    </div>
+                  {% endfor %}
             </div>
             <fieldset>
                 <legend>Action Items</legend>
@@ -18,16 +28,16 @@
                 {{ actionitem_form.non_form_errors }}
                 {% for form in actionitem_form %}
                     {{ form.id }}
-                    <div class="inline {{ actionitem_form.prefix }}">
-                        <div id="title">
+                    <div class="form-group row {{ actionitem_form.prefix }}">
+                        <div id="title" class="col-md-offset-1 col-md-3">
                           {{ form.title.errors }}
                           {{ form.title.label_tag }}
-                          {{ form.title }}
+                          {{ form.title|add_class:"form-control" }}
                         </div>
-                        <div id="description">
+                        <div id="description" class= "col-md-8">
                           {{ form.description.errors }}
                           {{ form.description.label_tag }}
-                          {{ form.description }}
+                          {{ form.description|add_class:"form-control" }}
                         </div>
                     </div>
                 {% endfor %}
