@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from forms import UserForm
 
+
 def user_login(request):
     context = RequestContext(request)
 
@@ -56,6 +57,10 @@ def base(request):
     context = RequestContext(request)
     return render_to_response('index.html', context_instance=context)
 
+
+def profile(request):
+    context = RequestContext(request)
+    return render_to_response('profile.html', context_instance=context)
 
 def logout_view(request):
     logout(request)

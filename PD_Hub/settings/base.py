@@ -197,8 +197,6 @@ LOGGING = {
 
 LOGIN_URL = '/login'
 
-ACCOUNT_ACTIVATION_DAYS = 7 # One-week user activation window;
-
 # Cache Backend
 CACHES = {
     'default': {
