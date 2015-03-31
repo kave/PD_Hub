@@ -3,15 +3,21 @@
 {% block content %}
     <div class="row text-center">
         <h2>PD Plan {{ plan.name }}</h2>
-
         <div class="panel panel-default">
           <div class="panel-heading">Super-visor</div>
           <div class="panel-body">
             {{ plan.supervisor }}
           </div>
         </div>
-{#        {% for peer in plan.peers %}#}
-{#            <p>peer.get_full_name</p>#}
-{#        {% endfor %}#}
+
+        <div class="panel panel-default">
+          <div class="panel-heading">Peers</div>
+          <div class="panel-body">
+            {% for peer in plan.peers.all %}
+                <p>{{ peer.get_full_name }}</p>
+            {% endfor %}
+          </div>
+        </div>
+
     </div>
 {% endblock %}
