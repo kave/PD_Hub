@@ -94,7 +94,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -137,7 +137,7 @@ INSTALLED_APPS = (
     #'django.contrib.sites',
 
     'compressor',
-    'debug_toolbar',
+    # 'debug_toolbar',
 
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
