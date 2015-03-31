@@ -22,7 +22,21 @@
                     </div>
                   {% endfor %}
             </div>
-            <fieldset>
+
+            <fieldset style="margin-top:3%">
+                <legend>Clone Action Items for Review</legend>
+                {% for clone in clone_action %}
+                    <div class="inline">
+                        <div id="title">
+                          Title: {{ clone.title }}
+                        </div>
+                        <div id="description">
+                          Description: {{ clone.description }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </fieldset>
+            <fieldset style="margin-top:3%">
                 <legend>Action Items</legend>
                 {{ actionitem_form.management_form }}
                 {{ actionitem_form.non_form_errors }}
