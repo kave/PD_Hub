@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block head_js %}
+    <script src="{{ STATIC_URL }}bower_components/jquery/dist/jquery.formset.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".inline.{{ actionitem_form.prefix }}").formset({
+                prefix: "{{ actionitem_form.prefix }}"
+            })
+        })
+    </script>
+
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<body>
+    <div>
+        <h1>Professional Development Plan</h1>
+        <form action="." method="post">
+            {% csrf_token %}
+            <div>
+                {{ form.as_p }}
+            </div>
+            <fieldset>
+                <legend>Action Items</legend>
+                {{ actionitem_form.management_form }}
+                {{ actionitem_form.non_form_errors }}
+                {% for form in actionitem_form %}
+                    {{ form.id }}
+                    <div class="inline {{ actionitem_form.prefix }}">
+                        <div id="title">
+                          {{ form.title.errors }}
+                          {{ form.title.label_tag }}
+                          {{ form.title }}
+                        </div>
+                        <div id="description">
+                          {{ form.description.errors }}
+                          {{ form.description.label_tag }}
+                          {{ form.description }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </fieldset>
+            <input type="submit" value="Add plan" class="submit" />
+        </form>
+    </div>
+</body>
+</html>
+
+{% endblock %}

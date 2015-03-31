@@ -3,9 +3,20 @@
 {% block content %}
 <div class="row">
     <p>Hub-Wide Professional Development Plan List</p>
-    {% for plan in plans %}
-        <a href="{% url 'core:pdp_view' plan.id %}">{{plan.name}}</a>
-    {% endfor %}
 </div>
-{% endblock %}
 
+<table class="table">
+    <thead>
+        <tr>
+            <th data-field="user">USER</th>
+            <th data-field="name">NAME</th>                     
+        </tr>
+    </thead>
+        {% for plan in plans %}
+        <tr>
+        	<td >{{plan.user}}</td>
+            <td ><a href="/view/{{plan.id}}">{{plan.name}}</a></td>
+        </tr>
+        {% endfor %}
+</table>
+{% endblock %}
