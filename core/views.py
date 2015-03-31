@@ -76,7 +76,7 @@ class PDPlanList(ListView):
     model = PDPlan
 
     def get(self, request):
-        plans = PDPlan.objects.all()
+        plans = PDPlan.objects.filter(user = request.user)
 
         return render(request, 'index.html', {'plans': plans})
 
