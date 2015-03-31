@@ -136,12 +136,12 @@ class PDPlanList(ListView):
         plans = PDPlan.objects.filter(user = request.user)
         return render(request, 'index.html', {'plans': plans})
 
-class PDPPlanDetailView(DetailView):
+class PDPlanDetailView(DetailView):
     model = PDPlan
     template_name = 'plan_view.html'
     context_object_name = 'plan'
 
     def get_context_data(self, **kwargs):
-        context = super(PDPPlanDetailView, self).get_context_data(**kwargs)
+        context = super(PDPlanDetailView, self).get_context_data(**kwargs)
         return context
 
