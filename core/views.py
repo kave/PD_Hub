@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.views.generic.edit import CreateView, UpdateView
 from forms import UserForm, PDPlanForm, ActionItemFormSet
 from models import PDPlan, ActionItem
+import random
 
 
 class PDPlanCreateView(CreateView):
@@ -161,6 +162,7 @@ class PDPlanClone(UpdateView):
         """
         pdpToClone = PDPlan.objects.get(id=self.kwargs['plan_id'])
         actionsToClone = ActionItem.objects.filter(plan=pdpToClone)
+        pdpToClone.id = None
         self.object = None
         form = PDPlanForm(instance=pdpToClone)
 
