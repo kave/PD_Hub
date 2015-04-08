@@ -146,10 +146,8 @@ class PDPlanDetailView(DetailView):
         context = super(PDPlanDetailView, self).get_context_data(**kwargs)
         return context
 
-from django.forms.formsets import formset_factory
-
 class PDPlanClone(UpdateView):
-    #PDPlan.objects.create(user=request.user, name=toClone.name).save()
+    # PDPlan.objects.create(user=request.user, name=toClone.name).save()
     print UpdateView.__dict__
     template_name = 'pdplan_add.html'
     model = PDPlan

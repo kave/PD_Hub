@@ -7,4 +7,4 @@ bower_components
 .DS_Store
 MYENV
 node_modules/PD_Hub/settings/local.py
-local.py
+local.py/PD_Hub/settings/local.py

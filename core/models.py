@@ -12,6 +12,7 @@ class PDPlan(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class ActionItem(models.Model):
     plan = models.ForeignKey(PDPlan)
 

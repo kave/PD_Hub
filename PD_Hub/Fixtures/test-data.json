@@ -1,0 +1,688 @@
+[
+{
+    "fields": {
+        "description": "Gain my CSPO certification",
+        "plan": 1,
+        "complete": false,
+        "title": "CSPO Training"
+    },
+    "model": "core.actionitem",
+    "pk": 1
+},
+{
+    "fields": {
+        "description": "Get my CPSO certification",
+        "plan": 2,
+        "complete": false,
+        "title": "CSPO"
+    },
+    "model": "core.actionitem",
+    "pk": 2
+},
+{
+    "fields": {
+        "description": "Become an account lead at a project",
+        "plan": 2,
+        "complete": false,
+        "title": "Account Lead"
+    },
+    "model": "core.actionitem",
+    "pk": 3
+},
+{
+    "fields": {
+        "description": "Generate new business for Excella",
+        "plan": 2,
+        "complete": false,
+        "title": "Initiative "
+    },
+    "model": "core.actionitem",
+    "pk": 4
+},
+{
+    "fields": {
+        "description": "Get my CPSO certification",
+        "plan": 3,
+        "complete": false,
+        "title": "CSPO"
+    },
+    "model": "core.actionitem",
+    "pk": 5
+},
+{
+    "fields": {
+        "description": "Become an account lead at a project",
+        "plan": 3,
+        "complete": false,
+        "title": "Account Lead"
+    },
+    "model": "core.actionitem",
+    "pk": 6
+},
+{
+    "fields": {
+        "description": "Generate new business for Excella",
+        "plan": 3,
+        "complete": false,
+        "title": "Initiative "
+    },
+    "model": "core.actionitem",
+    "pk": 7
+},
+{
+    "fields": {
+        "description": "Get my CPSO certification",
+        "plan": 4,
+        "complete": false,
+        "title": "CSPO"
+    },
+    "model": "core.actionitem",
+    "pk": 8
+},
+{
+    "fields": {
+        "description": "Become an account lead at a project",
+        "plan": 4,
+        "complete": false,
+        "title": "Account Lead"
+    },
+    "model": "core.actionitem",
+    "pk": 9
+},
+{
+    "fields": {
+        "description": "Generate new business for Excella",
+        "plan": 4,
+        "complete": false,
+        "title": "Initiative "
+    },
+    "model": "core.actionitem",
+    "pk": 10
+},
+{
+    "fields": {
+        "username": "sean.lewis",
+        "first_name": "Sean",
+        "last_name": "Lewis",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:26:17.693Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$5PUwgqwzBidr$G4lGGQH0JK2xIe2y1600a46KoD29zvSJaaYHjEQD50o=",
+        "email": "sean.lewis@excella.com",
+        "date_joined": "2015-04-08T14:42:20.416Z"
+    },
+    "model": "auth.user",
+    "pk": 1
+},
+{
+    "fields": {
+        "username": "mike.brown",
+        "first_name": "Mike",
+        "last_name": "Brown",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T14:43:18.176Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$HFLyhHuSHGHt$cj6U6BO+M4rhFUxYdXstCakpvg7hOdbipEIBlBGElAU=",
+        "email": "mike.brown@excella.com",
+        "date_joined": "2015-04-08T14:43:18.176Z"
+    },
+    "model": "auth.user",
+    "pk": 2
+},
+{
+    "fields": {
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2015-04-08T15:10:02.472Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$NpKrG9suoAK8$KtjfEH3d8K6FscxX8lKW7JtNwdG34hfFWKr9rIBumes=",
+        "email": "admin@excella.com",
+        "date_joined": "2015-04-08T14:45:16.600Z"
+    },
+    "model": "auth.user",
+    "pk": 3
+},
+{
+    "fields": {
+        "username": "mike.graf",
+        "first_name": "Michael",
+        "last_name": "Graf",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:09:32.937Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$OzdHwtFwBnM2$B58Dr3tPrZA10eAN0qmE5LEbFI1d2o+Lcx3Ss13I4ys=",
+        "email": "michael.graf@excella.com",
+        "date_joined": "2015-04-08T14:48:54Z"
+    },
+    "model": "auth.user",
+    "pk": 4
+},
+{
+    "fields": {
+        "username": "john.doe",
+        "first_name": "John",
+        "last_name": "Doe",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:06:13.518Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$3wNTLx7MF3Ez$PN+bbrtfpGS/6aTOUqrUqwXWw4hrunzqnHoIwknIwdQ=",
+        "email": "john.doe@excella.com",
+        "date_joined": "2015-04-08T15:06:13.518Z"
+    },
+    "model": "auth.user",
+    "pk": 5
+},
+{
+    "fields": {
+        "username": "jane.doe",
+        "first_name": "Jane",
+        "last_name": "Doe",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:06:30.290Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$X8eaPyQnA55X$1aQPC5XcQg47/w5z714l1o8wtlCPdX7QCp0N/BiFHbQ=",
+        "email": "jane.doe@excella.com",
+        "date_joined": "2015-04-08T15:06:30.290Z"
+    },
+    "model": "auth.user",
+    "pk": 6
+},
+{
+    "fields": {
+        "username": "jane.smith",
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:06:49.791Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$KcDmZotV6stw$fSMte7bqT84qbpUiO0NITZCOQdLnuYejzsNnILpVLEY=",
+        "email": "jane.smith@excella.com",
+        "date_joined": "2015-04-08T15:06:49.791Z"
+    },
+    "model": "auth.user",
+    "pk": 7
+},
+{
+    "fields": {
+        "username": "phil.hadwin",
+        "first_name": "Phil",
+        "last_name": "Hadwin",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:07:16.643Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$UoOI25ptOK4S$s/DR76qPIUP46LuIPb9wFexyqLxfDoim8dijZ5MybnA=",
+        "email": "phil.hadwin@excella.com",
+        "date_joined": "2015-04-08T15:07:16.643Z"
+    },
+    "model": "auth.user",
+    "pk": 8
+},
+{
+    "fields": {
+        "username": "tyler.perez",
+        "first_name": "Tyler",
+        "last_name": "Perez",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:07:38.421Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$Ea5SVhWaA3eF$JPygxGx96uVCce7EUii3zQqnfEM2zBimI0wqxKRJycg=",
+        "email": "tyler.perez@excella.com",
+        "date_joined": "2015-04-08T15:07:38.421Z"
+    },
+    "model": "auth.user",
+    "pk": 9
+},
+{
+    "fields": {
+        "username": "andy.lewandowski",
+        "first_name": "Andy",
+        "last_name": "Lewandowski",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:08:08.879Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$j7uFpChggJnY$LLLE86nYklWYvsvJUupWsyDR5ePPokK/irF0Tyw6osE=",
+        "email": "andy.lewandowski@excella.com",
+        "date_joined": "2015-04-08T15:08:08.879Z"
+    },
+    "model": "auth.user",
+    "pk": 10
+},
+{
+    "fields": {
+        "username": "john.smith",
+        "first_name": "John",
+        "last_name": "Smith",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:08:36.328Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$AhRipsuVwPZf$htud+DD0NhauZrR5ehB/jx1jiLoEfogcaDESoesfWu8=",
+        "email": "john.smith@excella.com",
+        "date_joined": "2015-04-08T15:08:36.328Z"
+    },
+    "model": "auth.user",
+    "pk": 11
+},
+{
+    "fields": {
+        "username": "michael.jordan",
+        "first_name": "Michael",
+        "last_name": "Jordan",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:09:09.537Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$b9mCqoBT6DXG$spidVPiOSzes9Bghjh2nMUkWEwoGg7yIIlXfYWVm0Vo=",
+        "email": "michael.jordan@excella.com",
+        "date_joined": "2015-04-08T15:09:09.537Z"
+    },
+    "model": "auth.user",
+    "pk": 12
+},
+{
+    "fields": {
+        "username": "joe.dirt",
+        "first_name": "Joe",
+        "last_name": "Dirt",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:10:27.021Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$5PUwgqwzBidr$G4lGGQH0JK2xIe2y1600a46KoD29zvSJaaYHjEQD50o=",
+        "email": "joe.dirt@excella.com",
+        "date_joined": "2015-04-08T14:42:20.416Z"
+    },
+    "model": "auth.user",
+    "pk": 13
+},
+{
+    "fields": {
+        "username": "jason.giambi",
+        "first_name": "Jason",
+        "last_name": "Giambi",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:10:27.021Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$5PUwgqwzBidr$G4lGGQH0JK2xIe2y1600a46KoD29zvSJaaYHjEQD50o=",
+        "email": "jason.giambi@excella.com",
+        "date_joined": "2015-04-08T14:42:20.416Z"
+    },
+    "model": "auth.user",
+    "pk": 14
+},
+{
+    "fields": {
+        "username": "matt.joel",
+        "first_name": "Matt",
+        "last_name": "Joel",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:10:27.021Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$5PUwgqwzBidr$G4lGGQH0JK2xIe2y1600a46KoD29zvSJaaYHjEQD50o=",
+        "email": "matt.joel@excella.com",
+        "date_joined": "2015-04-08T14:42:20.416Z"
+    },
+    "model": "auth.user",
+    "pk": 15
+},
+{
+    "fields": {
+        "username": "gretchen.houser",
+        "first_name": "Gretchen",
+        "last_name": "Houser",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:10:27.021Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$5PUwgqwzBidr$G4lGGQH0JK2xIe2y1600a46KoD29zvSJaaYHjEQD50o=",
+        "email": "gretchen.houser@excella.com",
+        "date_joined": "2015-04-08T14:42:20.416Z"
+    },
+    "model": "auth.user",
+    "pk": 16
+},
+{
+    "fields": {
+        "username": "babe.ruth",
+        "first_name": "Babe",
+        "last_name": "Ruth",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:10:27.021Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$5PUwgqwzBidr$G4lGGQH0JK2xIe2y1600a46KoD29zvSJaaYHjEQD50o=",
+        "email": "babe.ruth@excella.com",
+        "date_joined": "2015-04-08T14:42:20.416Z"
+    },
+    "model": "auth.user",
+    "pk": 17
+},
+{
+    "fields": {
+        "username": "barry.bonds",
+        "first_name": "Barry",
+        "last_name": "Bonds",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:10:27.021Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$5PUwgqwzBidr$G4lGGQH0JK2xIe2y1600a46KoD29zvSJaaYHjEQD50o=",
+        "email": "barry.bonds@excella.com",
+        "date_joined": "2015-04-08T14:42:20.416Z"
+    },
+    "model": "auth.user",
+    "pk": 18
+},
+{
+    "fields": {
+        "username": "scottie.pippen",
+        "first_name": "Scottie",
+        "last_name": "Pippen",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:10:27.021Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$5PUwgqwzBidr$G4lGGQH0JK2xIe2y1600a46KoD29zvSJaaYHjEQD50o=",
+        "email": "scottie.pippen@excella.com",
+        "date_joined": "2015-04-08T14:42:20.416Z"
+    },
+    "model": "auth.user",
+    "pk": 19
+},
+{
+    "fields": {
+        "username": "jim.carrey",
+        "first_name": "Jim",
+        "last_name": "Carrey",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:10:27.021Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$5PUwgqwzBidr$G4lGGQH0JK2xIe2y1600a46KoD29zvSJaaYHjEQD50o=",
+        "email": "jim.carrey@excella.com",
+        "date_joined": "2015-04-08T14:42:20.416Z"
+    },
+    "model": "auth.user",
+    "pk": 20
+},
+{
+    "fields": {
+        "username": "michael.phelps",
+        "first_name": "Michael",
+        "last_name": "Phelps",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2015-04-08T15:10:27.021Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$5PUwgqwzBidr$G4lGGQH0JK2xIe2y1600a46KoD29zvSJaaYHjEQD50o=",
+        "email": "michael.phelps@excella.com",
+        "date_joined": "2015-04-08T14:42:20.416Z"
+    },
+    "model": "auth.user",
+    "pk": 21
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-04-08T14:48:54.159Z",
+        "object_repr": "mike.graf",
+        "object_id": "4",
+        "change_message": "",
+        "user": 3,
+        "content_type": 3
+    },
+    "model": "admin.logentry",
+    "pk": 1
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-04-08T14:49:10.235Z",
+        "object_repr": "mike.graf",
+        "object_id": "4",
+        "change_message": "Changed first_name, last_name and email.",
+        "user": 3,
+        "content_type": 3
+    },
+    "model": "admin.logentry",
+    "pk": 2
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-04-08T14:49:31.654Z",
+        "object_repr": "Promotion",
+        "object_id": "1",
+        "change_message": "",
+        "user": 3,
+        "content_type": 7
+    },
+    "model": "admin.logentry",
+    "pk": 3
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-04-08T14:50:05.805Z",
+        "object_repr": "CSPO Training",
+        "object_id": "1",
+        "change_message": "",
+        "user": 3,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 4
+},
+{
+    "fields": {
+        "peers": [
+            4
+        ],
+        "supervisor": 2,
+        "user": 1,
+        "parent": null,
+        "name": "Promotion"
+    },
+    "model": "core.pdplan",
+    "pk": 1
+},
+{
+    "fields": {
+        "peers": [
+            1
+        ],
+        "supervisor": 2,
+        "user": 4,
+        "parent": null,
+        "name": "Promotion"
+    },
+    "model": "core.pdplan",
+    "pk": 2
+},
+{
+    "fields": {
+        "peers": [
+            4
+        ],
+        "supervisor": 2,
+        "user": 12,
+        "parent": null,
+        "name": "Promotion 1"
+    },
+    "model": "core.pdplan",
+    "pk": 3
+},
+{
+    "fields": {
+        "peers": [
+            4
+        ],
+        "supervisor": 2,
+        "user": 11,
+        "parent": null,
+        "name": "Promotion 2"
+    },
+    "model": "core.pdplan",
+    "pk": 4
+},
+{
+    "fields": {
+        "peers": [
+            19
+        ],
+        "supervisor": 21,
+        "user": 10,
+        "parent": null,
+        "name": "Politics"
+    },
+    "model": "core.pdplan",
+    "pk": 5
+},
+{
+    "fields": {
+        "peers": [
+            4
+        ],
+        "supervisor": 19,
+        "user": 20,
+        "parent": null,
+        "name": "Comedian"
+    },
+    "model": "core.pdplan",
+    "pk": 6
+},
+{
+    "fields": {
+        "peers": [
+            4
+        ],
+        "supervisor": 18,
+        "user": 21,
+        "parent": null,
+        "name": "Swimming"
+    },
+    "model": "core.pdplan",
+    "pk": 7
+},
+{
+    "fields": {
+        "peers": [
+            4
+        ],
+        "supervisor": 12,
+        "user": 19,
+        "parent": null,
+        "name": "Assist Master"
+    },
+    "model": "core.pdplan",
+    "pk": 8
+},
+{
+    "fields": {
+        "peers": [
+            4
+        ],
+        "supervisor": 20,
+        "user": 17,
+        "parent": null,
+        "name": "400 Homeruns"
+    },
+    "model": "core.pdplan",
+    "pk": 9
+},
+{
+    "fields": {
+        "peers": [
+            4
+        ],
+        "supervisor": 1,
+        "user": 13,
+        "parent": null,
+        "name": "Eat Dirt"
+    },
+    "model": "core.pdplan",
+    "pk": 10
+},
+{
+    "fields": {
+        "peers": [
+            4
+        ],
+        "supervisor": 7,
+        "user": 14,
+        "parent": null,
+        "name": "Hit Homerun"
+    },
+    "model": "core.pdplan",
+    "pk": 11
+},
+{
+    "fields": {
+        "peers": [
+            4
+        ],
+        "supervisor": 21,
+        "user": 15,
+        "parent": null,
+        "name": "Managing Partner"
+    },
+    "model": "core.pdplan",
+    "pk": 12
+}
+]
