@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class PDPlan(models.Model):
-    user = models.ForeignKey(User, unique=True)
+    user = models.ForeignKey(User)
     name = models.CharField(max_length=50)
     parent = models.ForeignKey("self", blank=True, null=True)
 
