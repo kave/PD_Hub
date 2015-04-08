@@ -134,7 +134,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.core.mail',
     'django.contrib.admin',
-    #'django.contrib.sites',
+    'django.contrib.sites',
 
     'compressor',
     # 'debug_toolbar',
@@ -147,8 +147,7 @@ INSTALLED_APPS = (
     'djangobower',
     'PD_Hub',
     'import_export',
-    'django.contrib.sites',
-    'django_comments',
+    'django_comments'
 )
 
 EMAIL_SUBJECT_PREFIX = '[PD_Hub] '
