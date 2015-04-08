@@ -171,7 +171,7 @@ class PDPlanClone(UpdateView):
         return self.render_to_response(
             self.get_context_data(form=form,
                                   actionitem_form=actionitem_form,
-                                  clone_action=actionsToClone ))
+                                  clone_action=actionsToClone, clone=True))
 
     def post(self, request, *args, **kwargs):
         """

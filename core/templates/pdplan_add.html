@@ -23,6 +23,7 @@
                   {% endfor %}
             </div>
 
+            {% if clone %}
             <fieldset style="margin-top:3%">
                 <legend>Clone Action Items for Review</legend>
                 {% for clone in clone_action %}
@@ -36,6 +37,7 @@
                     </div>
                 {% endfor %}
             </fieldset>
+            {% endif %}
             <fieldset style="margin-top:3%">
                 <legend>Action Items</legend>
                 {{ actionitem_form.management_form }}
@@ -56,7 +58,7 @@
                     </div>
                 {% endfor %}
             </fieldset>
-            <input type="submit" value="Add plan" class="submit" />
+            <input type="submit" value="Add plan" class="submit btn btn-primary" />
         </form>
     </div>
 </body>
