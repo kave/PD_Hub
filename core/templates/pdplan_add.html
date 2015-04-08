@@ -29,12 +29,13 @@
                 {% for clone in clone_action %}
                     <div class="inline">
                         <div id="title">
-                          Title: {{ clone.title }}
+                          <strong>Title:</strong> {{ clone.title }}
                         </div>
                         <div id="description">
-                          Description: {{ clone.description }}
+                          <strong>Description:</strong> {{ clone.description }}
                         </div>
                     </div>
+                    </br>
                 {% endfor %}
             </fieldset>
             {% endif %}
